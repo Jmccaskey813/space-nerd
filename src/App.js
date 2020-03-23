@@ -1,30 +1,13 @@
 import React, { Component } from 'react';
+import APOD from './components/APOD';
+import SatSit from './components/SatSit';
+import MarsRover from './components/MarsRover';
+import EARTH from './components/Earth';
+import MarsWeather from './components/MarsWeather';
 import './App.css';
 
 class App extends Component {
-  state = { 
-    display: '',
-    date: '',
-    explanation: '',
-    url: '',
-    title: ''
-   }
-
-  API_KEY= '?api_key=c2dcsnMGhzrk7klXlBPx0frW6zgt3VhIauR00MBF';
-
-  astronomyPicOfDay =  ()=> {
-    fetch('https://api.nasa.gov/planetary/apod?api_key=c2dcsnMGhzrk7klXlBPx0frW6zgt3VhIauR00MBF')
-    .then(response => response.json())
-    .then(data => {
-      const { date, explanation, url, title } = data
-      this.setState({
-        date: date,
-        explanation: explanation,
-        url: url,
-        title: title
-      })
-    } )
-  }
+  
 
   render() { 
     return ( 
@@ -34,7 +17,6 @@ class App extends Component {
       </div>
       <div>
         <APOD 
-          astronomyPicOfDay = {this.astronomyPicOfDay()}
         />
       </div>
       <div>
@@ -55,45 +37,14 @@ class App extends Component {
   }
 }
 
-const APOD = () => {
-  return (
-    <React.Fragment>
-       <button className="border-0" onClick= {()=> this.props.astronomyPicOfDay()}> Astronomy Pic Of The Day </button>
-    </React.Fragment>
-  )
-}
 
-function EARTH() {
-  return (
-    <React.Fragment>
-      <button className="border-0"> Earch Observation Data</button>
-    </React.Fragment>
-  )
-}
 
-function MarsRover() {
-  return (
-    <React.Fragment>
-      <button className="border-0">Mars Rover Photos</button>
-    </React.Fragment>
-  )
-}
 
-function SatSit() {
-  return (
-    <React.Fragment>
-      <button className="border-0">Satellite Situation Center</button>
-    </React.Fragment>
-  )
-}
 
-function MarsWeather () {
-  return (
-    <React.Fragment>
-      <button className="border-0">Mars Weather</button>
-    </React.Fragment>
-  )
-}
+
+
+
+
  
 function Header() {
   return (
