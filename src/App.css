@@ -2,6 +2,8 @@
   color: white;
   text-align: center;
   background-image: repeating-linear-gradient(to right, black, darkblue);
+  overflow: visible;
+  position: relative;
 }
 
 div {
@@ -27,12 +29,14 @@ p{
 }
 
 .footer{
+  display: none;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   text-align: center;
 }
+
 
 hr {
   background-color: white;
@@ -70,5 +74,14 @@ hr {
 }
 
 .description {
+  
+  position: relative;
   font-size: small;
+  width: 690px;
+}
+
+img {
+  position: relative;
+  width: 690px;
+  height: auto;
 }
