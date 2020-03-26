@@ -16,12 +16,14 @@ class APOD extends Component {
 
         if (this.state.display === 'true') {
             return (
-                <div>
+                <div className="display">
                     <img src= {this.state.url} alt='Nasa Pic Of The Day' />
+                  <div className="description">
+                    <p>{this.state.title}</p>
+                    <p>{this.state.explanation}</p>
+                    <p>retrieved: {this.state.date}</p>
 
-                    <p className="description">{this.state.title}</p>
-                    <p className="description">{this.state.explanation}</p>
-                    <p className="description">retrieved: {this.state.date}</p>
+                  </div>
 
                 </div>
             )

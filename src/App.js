@@ -11,7 +11,7 @@ class App extends Component {
 
   render() { 
     return ( 
-      <div className="container-sm" >
+      <div className="container-sm page-container" >
       <div>
         <Header />
       </div>
