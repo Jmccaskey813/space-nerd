@@ -88,3 +88,6 @@ img {
   position: relative;
 }
 
+span {
+  background: transparent;
+}

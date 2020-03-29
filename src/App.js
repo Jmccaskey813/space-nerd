@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import APOD from './components/APOD';
 import SatSit from './components/SatSit';
 import MarsRover from './components/MarsRover';
-import EARTH from './components/Earth';
+import EPIC from './components/EPIC';
 import MarsWeather from './components/MarsWeather';
 import './App.css';
 
@@ -20,7 +20,7 @@ class App extends Component {
         />
       </div>
       <div>
-        <EARTH />
+        <EPIC />
       </div>
       <div>
         <MarsRover />
